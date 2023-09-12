@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Country from "../Country/Country.jsx";
+import Country from "../country/country.jsx";
 const Countries = () => {
     const [countries,setCountries] = useState([]);
 
@@ -13,7 +13,7 @@ const Countries = () => {
             <h3>Coutries:{countries.length}</h3>
 
             {
-                countries.map(country => <Country country={country}></Country>)
+                countries.map(country => <Country key={country.cca3} country={country}></Country>)
             }
             
         </div>
